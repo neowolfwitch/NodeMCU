@@ -1,7 +1,7 @@
-/* DMX_Projector_Power
+/* Vankyo_Projector_Power
  * IR control for popular Vankyo projectors 
  * Works with ESP, ESP32 devides like D1 Mini and ESP-32 DevKit.
- * by Wolf I. Butler, Updated January, 2021
+ * by Wolf I. Butler, Updated January, 2022
  *
  */
 #include <IRremoteESP8266.h>
