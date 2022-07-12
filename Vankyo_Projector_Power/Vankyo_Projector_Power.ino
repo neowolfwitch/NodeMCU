@@ -15,10 +15,6 @@ IRsend irsend(4);  // IR LED Pin as per our circuit. Change this to the GPIO pin
 //Set your WiFi network information below...
 //const char* ssid = "Your_WIFI_SSID"; // your network AP SSID
 //const char* password = "Your_WIFI_Password"; // your network AP password
-const char* ssid = "WIFI_Network"; // your network AP SSID
-const char* password = "WIFI_Password"; // your network AP password
-//const char* ssid = "WIFI_Network"; // your network AP SSID
-//const char* password = "WIFI_Password"; // your network AP password
 
 //Set the E1.31 (DMX) Universe and channel you want to use.
 const int UNIVERSE = 1;       // Universe to listen to.

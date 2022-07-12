@@ -1,0 +1,7 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"U1";"WEMOS_D1_mini_light";1;"WeMos_D1_mini";;;
+2;"D1";"LED_D3.0mm_IRBlack";1;"IR204A";;;
+3;"U2";"TO-220-3_Vertical";1;"L7805";;;
+4;"Q1";"TO-92_Inline";1;"BC547";;;
+5;"J1";"TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal";1;"Screw_Terminal_01x02";;;
+6;"R1";"R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal";1;"R_US";;;
