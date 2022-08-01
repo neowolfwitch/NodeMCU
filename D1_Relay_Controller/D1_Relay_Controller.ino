@@ -1,5 +1,5 @@
 
-/* D1/ESP-12 E1.31 Relay Control
+/* D1 Mini/ESP-12 (16-bit) E1.31 Relay Control
  * by Wolf I. Butler, Updated August, 2022
  */
 
