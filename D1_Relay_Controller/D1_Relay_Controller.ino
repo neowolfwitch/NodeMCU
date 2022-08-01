@@ -1,14 +1,15 @@
 #include <ESP8266WiFi.h> // a library to include
 #include <E131.h>; // a library to include https://github.com/forkineye/E131
+//Updated 08/01/2022, Wolf Butler
 
 //Set your WiFi network information below...
-const char* ssid = "WIFI_Network"; // your network AP SSID
-const char* password = "WIFI_Password"; // your network AP password
+const char* ssid = "WiFi_SSID"; // your network AP SSID
+const char* password = "WiFi_Password"; // your network AP password
 
 //Set the universe and channel you want to use. Universe is E1.31 (DMX) universe.
 //Channel will generally be 0, which is actually 1 (Red) in DMX. Use 1 for Green, and 2 for Blue.
 const int universe = 1; // universe to listen to
-const int channel = 19 ; // channel to use - these are 1 lower than normal (0 = 1)
+const int channel = 14 ; // channel to use - these are 1 lower than normal (0 = 1)
 
 // Un-comment the following if not using DHCP, and edit accordingly.
 // Important: Those are commas, not periods!!! This is just the way the IPAddress datatype works.
@@ -17,7 +18,7 @@ const int channel = 19 ; // channel to use - these are 1 lower than normal (0 = 
 //const IPAddress gateway(10,0,0,1);
 //const IPAddress dns(8,8,8,8);
 
-//See below to set Multicast or Unicast. Default is multicast.
+//See below to set Multicast or Unicast. Default is multicast. Set to Unicast if you set IP address above!
 
 int channel_val; // the current value of the channel we are using, don't change this.
 long int num_ch_in_pkt; // number of channels in the recieved packet, don't change this.
@@ -51,14 +52,17 @@ void setup() {
 //Any DMX value under 127 is "Off", above 127 is "On".
 void loop() {
   num_ch_in_pkt = e131.parsePacket(); // parse packet
-  if (num_ch_in_pkt) {                          // if num_ch_in_pkt &amp;gt; 0
+  if (num_ch_in_pkt) {                // if num_ch_in_pkt &amp;gt; 0
     channel_val = (e131.data[channel]);
     Serial.println(channel_val);
     if (channel_val > 127) {
       digitalWrite(output_1, HIGH); // SSR on
+      Serial.println("Power On!");
+
     }
     else {
       digitalWrite(output_1, LOW); // SSR off
+      Serial.println("Power Off!");
     }
   }
 }
