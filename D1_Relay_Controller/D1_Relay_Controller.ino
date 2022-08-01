@@ -7,7 +7,6 @@ const char* ssid = "WiFi_SSID"; // your network AP SSID
 const char* password = "WiFi_Password"; // your network AP password
 
 //Set the universe and channel you want to use. Universe is E1.31 (DMX) universe.
-//Channel will generally be 0, which is actually 1 (Red) in DMX. Use 1 for Green, and 2 for Blue.
 const int universe = 1; // universe to listen to
 const int channel = 14 ; // channel to use - these are 1 lower than normal (0 = 1)
 
