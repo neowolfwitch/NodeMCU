@@ -7,10 +7,13 @@
 #include <E131.h>; // a library to include https://github.com/forkineye/E131
 
 //Set your WiFi network information below...
-const char* ssid = "WiFi_SSID"; // your network AP SSID
-const char* password = "WiFi_Password"; // your network AP password
+const char* ssid = "CatLady"; // your network AP SSID
+const char* password = "BigOrangeCat!"; // your network AP password
 
-//Set the universe and channel you want to use. Universe is E1.31 (DMX) universe.
+/* Set the universe and channel you want to use. Universe is E1.31 (DMX) universe.
+ * As noted: You want to subtract 1 from you xLights channel number. This is because the E131 library 
+ * starts channels at 0. instead of 1. So- if you use Channel 12 in xLights, set it to 11 below...
+ */
 const int universe = 1; // universe to listen to
 const int channel = 14 ; // channel to use - these are 1 lower than normal (0 = 1)
 
