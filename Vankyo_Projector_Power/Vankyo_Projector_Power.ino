@@ -1,7 +1,7 @@
 /* Vankyo_Projector_Power
  * IR control for popular Vankyo projectors 
  * Works with ESP, ESP32 devides like D1 Mini and ESP-32 DevKit.
- * by Wolf I. Butler, Updated January, 2022
+ * by Wolf I. Butler, Updated July, 2022
  *
  */
 #include <IRremoteESP8266.h>
@@ -14,7 +14,7 @@ IRsend irsend(4);  // IR LED Pin as per our circuit. Change this to the GPIO pin
 
 //Set your WiFi network information below...
 const char* ssid = "Your_WIFI_SSID"; // your network AP SSID
-const char* password = "Your_WIFI_Password"; // your network AP password
+const char* password = "Your_WIFI_Password!"; // your network AP password
 
 //Set the E1.31 (DMX) Universe and channel you want to use.
 const int UNIVERSE = 1;       // Universe to listen to.
